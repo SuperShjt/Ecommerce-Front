@@ -20,7 +20,7 @@ class QuickShop extends React.Component {
     `;
 
     try {
-      const response = await fetch("https://54.80.23.17:80/Controller/test.php", {
+      const response = await fetch("https://54.80.23.17/Controller/test.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ query }),
