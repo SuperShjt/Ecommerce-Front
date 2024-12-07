@@ -67,7 +67,7 @@ class Navbar extends React.Component {
         <ul className="sections">
           <li>
             <NavLink
-              to="/"
+              to="/all"
               className={({ isActive }) => (isActive ? "active-link" : "")}
             >
               {({ isActive }) => (
@@ -81,7 +81,7 @@ class Navbar extends React.Component {
           </li>
           <li>
             <NavLink
-              to="/cloth"
+              to="/clothes"
               className={({ isActive }) => (isActive ? "active-link" : "")}
             >
               {({ isActive }) => (
