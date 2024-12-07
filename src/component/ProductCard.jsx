@@ -6,9 +6,9 @@ class ProductCard extends React.Component {
   render() {
     const { product, addToCart } = this.props; 
     const { id, name, price, img_url, inStock } = product;
-
+    const kebabKey = name.toLowerCase().replace(/\s+/g, "-");
     return (
-      <div className="product-card" data-testid={`product-${name}`}  >
+      <div className="product-card" data-testid={`product-${kebabKey}`}  >
         <Link to={`/product/${id}`}>
           <div className="product-image">
             <img src={img_url[0]} alt={name} className={inStock ? null : "out-of-stock"} />
