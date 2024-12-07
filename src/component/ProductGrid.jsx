@@ -20,7 +20,7 @@ class ProductGrid extends Component {
     }`;
 
     try {
-      const response = await fetch("https://54.80.23.17/Controller/test.php", {
+      const response = await fetch("store-marco-backend.space/Controller/test.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
