@@ -78,7 +78,6 @@ class ProductPage extends Component {
   
     if (Object.keys(errors).length > 0) {
       this.setState({ errors });
-      alert("Please select all required attributes!");
       return;
     }
   
@@ -99,7 +98,6 @@ class ProductPage extends Component {
     };
   
     addToCart(cartItem);
-    alert("Item added to cart!");
   };
   
   nextImg = ()=>{

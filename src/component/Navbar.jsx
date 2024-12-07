@@ -112,7 +112,7 @@ class Navbar extends React.Component {
         <img src={logo} alt="Logo" id="logo" />
 
         <div className="cart-menu">
-          <button id="cart" data-cart-status={cartStatus} onClick={this.toggleCart}>
+          <button data-testid='cart-btn' id="cart" data-cart-status={cartStatus} onClick={this.toggleCart}>
             <img src={cart} alt="Cart" className="img" />
             <h6 id="cart-counter">{totalQuantity}</h6>
           </button>

@@ -66,7 +66,6 @@ class QuickShop extends React.Component {
           return `${attr.name}:\n${formattedValues}`;
         }).join("\n");
 
-        alert(`Added ${product.name} to the cart with attributes:\n${attributeDisplay} with quantity = ${cartItem.quantity}`);
       }
     } catch (error) {
       console.error("Failed to fetch product attributes:", error);

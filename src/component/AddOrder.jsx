@@ -39,7 +39,7 @@ class AddOrder extends Component {
     
     
 
-    alert("Order placement completed, and cart is cleared!");
+    
     clearCart();
   };
 
