@@ -37,7 +37,7 @@ class ProductPage extends Component {
     `;
 
     try {
-      const response = await fetch("store-marco-backend.space/Controller/test.php", {
+      const response = await fetch("https://store-marco-backend.space/Controller/test.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ query }),
