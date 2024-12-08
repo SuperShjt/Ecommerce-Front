@@ -69,14 +69,9 @@ class Navbar extends React.Component {
             <NavLink
               to="/all"
               className={({ isActive }) => (isActive ? "active-link" : "")}
+              data-testid={({isActive}) =>(isActive ? "active-category-link" : "category-link" )}
             >
-              {({ isActive }) => (
-                <span
-                  data-testid={isActive ? "active-category-link" : "category-link"}
-                >
-                  ALL
-                </span>
-              )}
+              All
             </NavLink>
           </li>
           <li>
