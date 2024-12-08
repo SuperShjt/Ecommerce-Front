@@ -73,6 +73,7 @@ class Navbar extends React.Component {
               
             >
               All
+              {console.log(window.location.pathname)}
             </NavLink>
           </li>
           <li>
