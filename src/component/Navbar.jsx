@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import logo from "../assets/Logo.png";
 import cart from "../assets/Empty Cart.svg";
 import AddOrder from "./AddOrder";
@@ -66,43 +66,37 @@ class Navbar extends React.Component {
       <nav className="navbar">
         <ul className="sections">
           <li>
-            <NavLink
-              to="/all"
-              className={({ isActive }) => (isActive ? "active-link" : "")}
-              data-testid={window.location.pathname === "/all" ? "active-category-link"  : "category-link"}
-              
-            >
-              All
-              {console.log(window.location.pathname)}
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/clothes"
-              className={({ isActive }) => (isActive ? "active-link" : "")}
-            >
-              {({ isActive }) => (
-                <span
-                  data-testid={isActive ? "active-category-link" : "category-link"}
-                >
-                  Clothes
-                </span>
-              )}
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/tech"
-              className={({ isActive }) => (isActive ? "active-link" : "")}
-            >
-              {({ isActive }) => (
-                <span
-                  data-testid={isActive ? "active-category-link" : "category-link"}
-                >
-                  Tech
-                </span>
-              )}
-            </NavLink>
+          <NavLink
+          to="/all"
+          className={({ isActive }) => (isActive ? "active-link" : "")}
+          data-testid={
+            location.pathname === "/all" ? "active-category-link" : "category-link"
+          }
+        >
+          All
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/clothes"
+          className={({ isActive }) => (isActive ? "active-link" : "")}
+          data-testid={
+            location.pathname === "/clothes" ? "active-category-link" : "category-link"
+          }
+        >
+          Clothes
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/tech"
+          className={({ isActive }) => (isActive ? "active-link" : "")}
+          data-testid={
+            location.pathname === "/tech" ? "active-category-link" : "category-link"
+          }
+        >
+          Tech
+        </NavLink>
           </li>
         </ul>
 
