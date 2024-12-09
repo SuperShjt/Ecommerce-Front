@@ -68,7 +68,7 @@ class Navbar extends React.Component {
         <ul className="sections">
               <li>
                 <NavLink
-              to="/"
+              to="/all"
               className={({ isActive }) => (isActive ? "active-link" : "")}
               data-testid={
                 location.pathname === "/" ? "active-category-link" : "category-link"
