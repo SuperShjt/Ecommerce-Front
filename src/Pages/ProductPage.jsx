@@ -96,7 +96,7 @@ class ProductPage extends Component {
       }, {}),
       quantity: 1,
     };
-  
+    toggleCart();
     addToCart(cartItem);
   };
   
@@ -191,9 +191,7 @@ class ProductPage extends Component {
             <p><strong>Price: <br/> ${product.price.toFixed(2)} </strong></p>
 
           {product.inStock ? (
-            <button data-testid='add-to-cart' className="product-add-button" onClick={()=>{this.handleAddToCart;
-              this.toggleCart;
-            }}>Add To Cart</button>
+            <button data-testid='add-to-cart' className="product-add-button" onClick={this.handleAddToCart}>Add To Cart</button>
           ) : (
             <button data-testid='add-to-cart' disabled>Out Of Stock</button>
           )}

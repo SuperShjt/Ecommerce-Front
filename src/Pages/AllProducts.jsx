@@ -3,7 +3,7 @@ import ProductGrid from "../component/ProductGrid";
 
 class AllProducts extends Component {
   render() {
-    const { addToCar, toggleCart } = this.props; 
+    const { addToCart, toggleCart } = this.props; 
     return (
       <main className="page-layout">
         <h1><strong>Products</strong></h1>

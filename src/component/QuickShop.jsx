@@ -52,7 +52,7 @@ class QuickShop extends React.Component {
           quantity: 1,
         };
 
-      
+        toggleCart();
         addToCart(cartItem);
 
         
@@ -74,9 +74,7 @@ class QuickShop extends React.Component {
 
   render() {
     return (
-      <button className="quick-shop-btn" onClick={()=> {this.handleQuickShop;
-                                                        this.toggleCart; }
-      }>
+      <button className="quick-shop-btn" onClick={this.handleQuickShop}>
         <img src={quickcart} alt="Quick Shop" />
       </button>
     );
