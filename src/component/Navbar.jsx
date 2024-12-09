@@ -56,7 +56,7 @@ class Navbar extends React.Component {
   };
 
   render() {
-    const { cartStatus, cartItems, clearCart } = this.props;
+    const { cartStatus, cartItems, clearCart, location } = this.props;
     const totalPrice = this.calculateTotalPrice();
     const totalQuantity = this.calculateTotalQuantity();
 
@@ -203,7 +203,7 @@ class Navbar extends React.Component {
   }
 }
 
-export default withLocation(Navbar);bar;
+export default withLocation(Navbar);
 
 /**
  * Cart  attribute Design
