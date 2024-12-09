@@ -66,7 +66,7 @@ class ProductPage extends Component {
 
   handleAddToCart = () => {
     const { product, selectedAttributes } = this.state;
-    const { addToCart } = this.props;
+    const { addToCart, toggleCart } = this.props;
   
     const errors = {};
     // Validate selected attributes
@@ -125,8 +125,7 @@ class ProductPage extends Component {
 
 
   render() {
-    const { product, loading, error, selectedAttributes, errors, mainImg , toggleCart  } = this.state;
-
+    const { product, loading, error, selectedAttributes, errors, mainImg   } = this.state;
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error: {error}</p>;
 
