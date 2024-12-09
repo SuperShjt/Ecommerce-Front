@@ -65,18 +65,17 @@ class Navbar extends React.Component {
     return (
       <nav className="navbar">
         <ul className="sections">
-        <li>
+          <li>
             <NavLink
               to="/all"
               className={({ isActive }) => (isActive ? "active-link" : "")}
             >
               {({ isActive }) => (
-                <a
-                  href="/all"
+                <span
                   data-testid={isActive ? "active-category-link" : "category-link"}
                 >
-                  All
-                </a>
+                  ALL
+                </span>
               )}
             </NavLink>
           </li>
@@ -86,12 +85,11 @@ class Navbar extends React.Component {
               className={({ isActive }) => (isActive ? "active-link" : "")}
             >
               {({ isActive }) => (
-                <a
-                  href="/clothes"
-                  data-testid={isActive ? "active-cloth-link" : "cloth-link"}
+                <span
+                  data-testid={isActive ? "active-category-link" : "category-link"}
                 >
                   Clothes
-                </a>
+                </span>
               )}
             </NavLink>
           </li>
@@ -101,12 +99,11 @@ class Navbar extends React.Component {
               className={({ isActive }) => (isActive ? "active-link" : "")}
             >
               {({ isActive }) => (
-                <a
-                  href="/tech"
-                  data-testid={isActive ? "active-tech-link" : "tech-link"}
+                <span
+                  data-testid={isActive ? "active-category-link" : "category-link"}
                 >
                   Tech
-                </a>
+                </span>
               )}
             </NavLink>
           </li>
