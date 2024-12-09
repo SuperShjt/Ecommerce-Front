@@ -9,7 +9,7 @@ import GreyScreen from "./component/GreyScreen";
 
 function App() {
   const [cartItems, setCartItems] = React.useState([]);
-  const [cartStatus, setCartStatus] = React.useState("cart-btn"); // New state for cartStatus
+  const [cartStatus, setCartStatus] = React.useState("closed"); // New state for cartStatus
 
   const addToCart = (newItem) => {
     setCartItems((prevItems) => {
@@ -42,7 +42,7 @@ function App() {
   };
 
   const toggleCart = () => {
-    setCartStatus((prevStatus) => (prevStatus === "cart-btn" ? "cart-overlay" : "cart-btn"));
+    setCartStatus((prevStatus) => (prevStatus === "closed" ? "open" : "closed"));
   };
 
   return (

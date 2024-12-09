@@ -159,7 +159,7 @@ class ProductPage extends Component {
                         {attr.items.map((item, itemIndex) => (
                           <label
                           key={itemIndex}
-                          data-testid={`product-attribute-${attr.name === "Color" ? "color" : "default"}${selectedAttributes[attr.name] === item.valuex ? `-${item.valuex}-selected` : ""}`}
+                          data-testid={`product-attribute-${attr.name.toLowerCase()}-${item.display_value}`}
                           className={`attribute-item ${
                             attr.name === "Color"
                             ? "color-item"
