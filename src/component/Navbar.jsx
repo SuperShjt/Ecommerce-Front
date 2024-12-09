@@ -142,7 +142,7 @@ class Navbar extends React.Component {
                                         value.selected ? "selected" : ""
                                       }`}
                                       style={{ backgroundColor: value.valuex }}
-                                      data-testid={`cart-item-attribute-${kebabKey}-${value.valuex}${
+                                      data-testid={`product-attribute-${kebabKey}-${value.valuex}${
                                         value.selected ? "-selected" : ""
                                       }`}
                                     />

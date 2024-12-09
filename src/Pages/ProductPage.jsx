@@ -153,12 +153,13 @@ class ProductPage extends Component {
 
           <div className="attributes">
                   {product.attributes.map((attr, attrIndex) => (
-                    <div key={attrIndex} className="attribute" data-testid= {`product-attribute-${attr.name}`}>
+                    <div key={attrIndex} className="attribute" data-testid= {`product-attribute-${attr.name.toLowerCase()}`}>
                       <p><strong>{attr.name}: </strong></p>
                       <div className="attribute-items">
                         {attr.items.map((item, itemIndex) => (
                           <label
                           key={itemIndex}
+                          data-testid={`product-attribute-${attr.name === "Color" ? "color" : "default"}${selectedAttributes[attr.name] === item.valuex ? `-${item.valuex}-selected` : ""}`}
                           className={`attribute-item ${
                             attr.name === "Color"
                             ? "color-item"
