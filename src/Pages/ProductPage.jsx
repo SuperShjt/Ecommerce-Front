@@ -125,7 +125,7 @@ class ProductPage extends Component {
 
 
   render() {
-    const { product, loading, error, selectedAttributes, errors, mainImg  } = this.state;
+    const { product, loading, error, selectedAttributes, errors, mainImg , toggleCart  } = this.state;
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error: {error}</p>;
@@ -191,7 +191,9 @@ class ProductPage extends Component {
             <p><strong>Price: <br/> ${product.price.toFixed(2)} </strong></p>
 
           {product.inStock ? (
-            <button data-testid='add-to-cart' className="product-add-button" onClick={this.handleAddToCart}>Add To Cart</button>
+            <button data-testid='add-to-cart' className="product-add-button" onClick={()=>{this.handleAddToCart;
+              this.toggleCart;
+            }}>Add To Cart</button>
           ) : (
             <button data-testid='add-to-cart' disabled>Out Of Stock</button>
           )}

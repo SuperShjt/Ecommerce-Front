@@ -4,11 +4,11 @@ import ClothGrid from "../component/ClothGrid";
 class ClothProducts extends Component{
 
     render(){
-        const { addToCart } = this.props; 
+        const { addToCart, toggleCart  } = this.props; 
         return(
             <main className="page-layout">
             <h1><strong>Clothes</strong></h1>
-            <ClothGrid addToCart={addToCart}></ClothGrid>
+            <ClothGrid addToCart={addToCart}  toggleCart={toggleCart}></ClothGrid>
             </main>
         );
     }

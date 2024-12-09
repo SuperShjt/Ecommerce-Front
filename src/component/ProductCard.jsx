@@ -4,7 +4,7 @@ import QuickShop from "./QuickShop";
 
 class ProductCard extends React.Component {
   render() {
-    const { product, addToCart } = this.props; 
+    const { product, addToCart , toggleCart } = this.props; 
     const { id, name, price, img_url, inStock } = product;
     const kebabKey = name.toLowerCase().replace(/\s+/g, "-");
     return (
@@ -17,7 +17,7 @@ class ProductCard extends React.Component {
         </Link>
         <h3>{name}</h3>
         <p>${price.toFixed(2)}</p>
-        {inStock && <QuickShop product={product} addToCart={addToCart} />} 
+        {inStock && <QuickShop product={product} addToCart={addToCart}   toggleCart={toggleCart}/>} 
       </div>
     );
   }

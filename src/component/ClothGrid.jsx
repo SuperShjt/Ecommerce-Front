@@ -39,14 +39,14 @@ class ClothGrid extends Component {
 
   render() {
     const { products, isLoading, error } = this.state;
-    const { addToCart } = this.props; 
+    const { addToCart , toggleCart } = this.props; 
     if (isLoading) return <div>Loading products...</div>;
     if (error) return <div>Error: {error}</div>;
 
     return (
       <div className="product-grid">
         {products.map((product) => (
-          <ProductCard key={product.id} product={product} addToCart={addToCart} /> 
+          <ProductCard key={product.id} product={product} addToCart={addToCart}   toggleCart={toggleCart}/> 
         ))
         }
       </div>

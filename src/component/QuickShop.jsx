@@ -3,7 +3,7 @@ import quickcart from "../assets/Quickcart.png";
 
 class QuickShop extends React.Component {
   handleQuickShop = async () => {
-    const { product, addToCart } = this.props;
+    const { product, addToCart , toggleCart} = this.props;
 
     const query = `
       {
@@ -74,7 +74,9 @@ class QuickShop extends React.Component {
 
   render() {
     return (
-      <button className="quick-shop-btn" onClick={this.handleQuickShop}>
+      <button className="quick-shop-btn" onClick={()=> {this.handleQuickShop;
+                                                        this.toggleCart; }
+      }>
         <img src={quickcart} alt="Quick Shop" />
       </button>
     );
