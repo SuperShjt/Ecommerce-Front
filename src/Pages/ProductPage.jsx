@@ -190,18 +190,32 @@ class ProductPage extends Component {
             <p><strong>Price: <br/> ${product.price.toFixed(2)} </strong></p>
 
             <button
-  data-testid="add-to-cart"
-  className="product-add-button"
-  onClick={product.inStock ? this.handleAddToCart : undefined}
-  disabled={
-    !product.inStock || 
-    product.attributes.some(
-      (attr) => !this.state.selectedAttributes[attr.name]
-    )
-  }
->
-  {product.inStock ? "Add To Cart" : "Out Of Stock"}
-</button>
+                data-testid="add-to-cart"
+                className="product-add-button"
+                onClick={product.inStock ? this.handleAddToCart : undefined}
+                disabled={
+                  !product.inStock ||
+                  product.attributes.some(
+                    (attr) => !this.state.selectedAttributes[attr.name]
+                  )
+                }
+              >
+                {product.inStock ? "Add To Cart" : "Out Of Stock"}
+              </button>
+                    {!product.inStock && (
+                      <p className="error-text" style={{ color: "red" }}>
+                        This product is out of stock.
+                      </p>
+                    )}
+                    {product.inStock &&
+                      product.attributes.some(
+                        (attr) => !this.state.selectedAttributes[attr.name]
+                      ) && (
+                        <p className="error-text" style={{ color: "red" }}>
+                          Please select all required options to enable the button.
+                        </p>
+                      )}
+               
               <div data-testid='product-description'>
                  <strong>Description:</strong>
                   <p>{parse(product.description)}</p>
