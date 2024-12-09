@@ -189,11 +189,14 @@ class ProductPage extends Component {
 
             <p><strong>Price: <br/> ${product.price.toFixed(2)} </strong></p>
 
-          {product.inStock ? (
-            <button data-testid='add-to-cart' className="product-add-button" onClick={this.handleAddToCart}>Add To Cart</button>
-          ) : (
-            <button data-testid='add-to-cart' disabled>Out Of Stock</button>
-          )}
+            <button
+                data-testid="add-to-cart"
+                className="product-add-button"
+                onClick={product.inStock ? this.handleAddToCart : undefined}
+                disabled={!product.inStock}
+              >
+                {product.inStock ? "Add To Cart" : "Out Of Stock"}
+              </button>
               <div data-testid='product-description'>
                  <strong>Description:</strong>
                   <p>{parse(product.description)}</p>
