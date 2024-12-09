@@ -104,11 +104,11 @@ class Navbar extends React.Component {
         <img src={logo} alt="Logo" id="logo" />
 
         <div className="cart-menu">
-          <button data-testid='cart-btn' id="cart" data-cart-status={cartStatus} onClick={this.toggleCart}>
+          <button data-testid={cartStatus} id="cart"  onClick={this.toggleCart}>
             <img src={cart} alt="Cart" className="img" />
             <h6 id="cart-counter">{totalQuantity}</h6>
           </button>
-          {cartStatus === "open" && (
+          {cartStatus === "cart-overlay" && (
             <div className="current-cart">
               <p data-testid="cart-item-amount">
                 <strong>My Bag</strong> {totalQuantity} items

@@ -259,12 +259,12 @@ h1{
     color: white;
   }
 
- #cart[data-cart-status = "open"] + .current-cart{
+  #cart[data-testid = "cart-overlay"] + .current-cart{
   display: block;
   padding: 0;
  }
 
- #cart[data-cart-status = "closed"] + .current-cart{
+ #cart[data-testid = "cart-btn"] + .current-cart{
   display: none;
  }
 
